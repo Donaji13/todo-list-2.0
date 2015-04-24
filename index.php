@@ -51,29 +51,3 @@ $('add-new-task input[name=new-task]').val();
 	$(data).appendTo('.task-list ul').hide().fadeIn();
 	});
 }
-return false;
-		});
-	}
-	$('.delete-button').click(function(){
-		var current_element = $(this);
-		var task_id = $(this).attr('id');
-		$.post('includes/delete-task.php', {id: task_id}, function(){
-		current_element.parent().fadeOut("fast", function(){
-			$(this).remove();
-		});
-	});
-});
-</script>
-
-<?php
-require_once(__DIR__ . "/php/Controller/login-verify.php");
-require_once(__DIR__ . "/php/View/header.php");
-if(authenticateUser()){
-require_once(__DIR__ . "/php/View/navigation.php");
-}
-require_once(__DIR__ . "/php/Controller/create-db.php");
-require_once(__DIR__ . "/php/View/footer.php");
-require_once(__DIR__ . "/php/Controller/read-posts.php");
-?>
-
-</html>
