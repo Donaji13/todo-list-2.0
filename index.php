@@ -64,7 +64,4 @@ return false;
 	});
 });
 </script>
-
-
-
 </html>
