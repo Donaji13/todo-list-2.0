@@ -7,4 +7,6 @@ if ($result = $mysqli->query("DELETE FROM tasks WHERE id='task_id'")) {
 	
 }
 
+
+
 ?>
